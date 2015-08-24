@@ -101,5 +101,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/configs/sec_config:system/etc/sec_config
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8916
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(VENDOR_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(VENDOR_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
+
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
