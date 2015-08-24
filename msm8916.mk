@@ -97,5 +97,9 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# IRSC
+PRODUCT_COPY_FILES += \
+    $(VENDOR_PATH)/configs/sec_config:system/etc/sec_config
+
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
