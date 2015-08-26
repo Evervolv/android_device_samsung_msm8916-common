@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf
+    $(VENDOR_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -109,6 +109,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(VENDOR_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8916 \
+    libxml2
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
