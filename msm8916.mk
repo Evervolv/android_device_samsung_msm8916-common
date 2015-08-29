@@ -108,6 +108,8 @@ PRODUCT_PACKAGES += \
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(VENDOR_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    $(VENDOR_PATH)/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
     $(VENDOR_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
 # Camera
