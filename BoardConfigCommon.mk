@@ -85,6 +85,9 @@ TARGET_GPS_HAL_PATH := device/samsung/msm8916-common/gps
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Qualcomm support
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_QCOM_BSP := true

@@ -140,6 +140,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8916
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8916
+
 # ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
