@@ -92,6 +92,7 @@ HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 # Camera
+TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Added to indicate that protobuf-c is supported in this build
