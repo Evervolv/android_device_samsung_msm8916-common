@@ -162,11 +162,6 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
-
-# ADB 
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
-    ro.adb.secure=0
 	
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
