@@ -104,6 +104,9 @@ PROTOBUF_SUPPORTED := true
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Custom RIL class
+BOARD_RIL_CLASS := device/samsung/msm8916-common/ril/
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
