@@ -55,6 +55,10 @@ BLUETOOTH_HCI_USE_MCT := true
 # Malloc Implementation
 MALLOC_IMPL := dlmalloc
 
+# Audio
+BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+
 # Display
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
