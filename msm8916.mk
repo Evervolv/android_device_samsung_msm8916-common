@@ -38,7 +38,10 @@ PRODUCT_COPY_FILES += \
 
 # USB 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
+
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -120,6 +123,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     camera.msm8916 \
     libxml2
+
+# ANT+ stack
+PRODUCT_PACKAGES += \
+    AntHalService \
+    libantradio \
+    antradio_app
 
 # ADB 
 ADDITIONAL_DEFAULT_PROPERTIES += \
