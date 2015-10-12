@@ -119,5 +119,10 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libxml2
 
+# ADB 
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0
+	
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
