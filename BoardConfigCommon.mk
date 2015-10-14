@@ -92,6 +92,9 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Added to indicate that protobuf-c is supported in this build
+PROTOBUF_SUPPORTED := true
+
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
