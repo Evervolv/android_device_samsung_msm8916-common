@@ -90,6 +90,12 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8916
 
+# IPv6 tethering
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
+
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck \
@@ -124,11 +130,28 @@ PRODUCT_PACKAGES += \
     camera.msm8916 \
     libxml2
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8916
+
 # ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
     libantradio \
     antradio_app
+
+# WCNSS service daemon
+PRODUCT_PACKAGES += \
+    libwcnss_qmi \
+    wcnss_service
+
+# WPA supplicant
+PRODUCT_PACKAGES += \
+    dhcpcd.conf \
+    hostapd \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf
 
 # ADB 
 ADDITIONAL_DEFAULT_PROPERTIES += \

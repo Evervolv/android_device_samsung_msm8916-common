@@ -246,3 +246,4 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9306; \
     $(TARGET_OUT_ETC)/firmware/wcd9306/wcd9306_mbhc.bin)
 
 endif
+endif
