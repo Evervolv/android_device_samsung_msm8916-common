@@ -30,6 +30,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 # Architecture
 TARGET_CPU_VARIANT := cortex-a53
 ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_CPU_CORTEX_A53 := true
 
 # Board CFLAGS
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
