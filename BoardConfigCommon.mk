@@ -79,6 +79,9 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# GPS
+TARGET_GPS_HAL_PATH := device/samsung/msm8916-common/gps
+
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
