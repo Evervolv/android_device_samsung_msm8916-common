@@ -153,6 +153,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8916
+
 # ADB 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
