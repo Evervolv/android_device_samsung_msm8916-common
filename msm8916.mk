@@ -45,6 +45,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Touch issue workaround
+PRODUCT_PACKAGES += \
+    InputDisabler
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
