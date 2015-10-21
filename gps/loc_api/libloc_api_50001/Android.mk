@@ -41,7 +41,8 @@ LOCAL_CFLAGS += \
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
     $(TARGET_OUT_HEADERS)/libloc_core \
-    $(LOCAL_DIR)
+    $(call project-path-for,qcom-gps)/loc_api/libloc_api_50001 \
+    $(TARGET_OUT_HEADERS)/libflp
 
 LOCAL_COPY_HEADERS_TO:= libloc_eng/
 LOCAL_COPY_HEADERS:= \
@@ -53,6 +54,8 @@ LOCAL_COPY_HEADERS:= \
    loc_eng_agps.h \
    loc_eng_msg.h \
    loc_eng_log.h
+
+LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -74,6 +77,9 @@ LOCAL_SHARED_LIBRARIES := \
     libgps.utils \
     libdl
 
+ifneq ($(filter $(TARGET_DEVICE), apq8084 msm8960), false)
+endif
+
 LOCAL_SRC_FILES += \
     loc.cpp \
     gps.c
@@ -89,9 +95,11 @@ endif
 ## Includes
 LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/gps.utils \
-    $(TARGET_OUT_HEADERS)/libloc_core
+    $(TARGET_OUT_HEADERS)/libloc_core \
+    $(TARGET_OUT_HEADERS)/libflp
 
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_PRELINK_MODULE := false
+LOCAL_MODULE_RELATIVE_PATH := hw
 
 include $(BUILD_SHARED_LIBRARY)
 
