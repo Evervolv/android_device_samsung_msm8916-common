@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
+# Samsung symbols
+PRODUCT_PACKAGES += \
+    libsamsung_symbols
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
@@ -164,6 +168,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prima/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/prima/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+
+# Samsung symbols
+PRODUCT_PACKAGES += \
+    libsamsung_symbols
 
 # USB 
 PRODUCT_PACKAGES += \
