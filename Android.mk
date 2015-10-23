@@ -20,6 +20,8 @@ ifeq ($(BOARD_VENDOR),samsung)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8916)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
+include $(CLEAR_VARS)
+
 # CMN
 CMN_IMAGES := \
     cmnlib.b00 cmnlib.b01 cmnlib.b02 cmnlib.b03 cmnlib.mdt
