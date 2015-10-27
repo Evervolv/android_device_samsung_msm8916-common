@@ -107,6 +107,12 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    device/samsung/a5-common/sepolicy
+
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
