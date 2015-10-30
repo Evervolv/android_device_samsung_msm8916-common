@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+VENDOR_PATH := device/samsung/msm8916-common
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(VENDOR_PATH)/overlay
 
