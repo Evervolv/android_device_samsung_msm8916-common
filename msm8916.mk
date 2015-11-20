@@ -42,10 +42,6 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
-# Samsung symbols
-PRODUCT_PACKAGES += \
-    libsamsung_symbols
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/etc/audio_effects.conf \
@@ -173,9 +169,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8916RIL
 
-# Samsung symbols
 PRODUCT_PACKAGES += \
-    libsamsung_symbols
+    libril_shim
 
 # USB 
 PRODUCT_PACKAGES += \
