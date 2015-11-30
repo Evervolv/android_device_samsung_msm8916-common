@@ -167,7 +167,8 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungMSM8916RIL
+    ro.telephony.ril_class=SamsungMSM8916RIL \
+    ro.ril.telephony.mqanelements=6
 
 PRODUCT_PACKAGES += \
     libril_shim
