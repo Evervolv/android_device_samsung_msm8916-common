@@ -112,7 +112,7 @@ BOARD_RIL_CLASS := device/samsung/msm8916-common/ril/
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    device/samsung/a5-common/sepolicy
+    device/samsung/msm8916-common/sepolicy
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
