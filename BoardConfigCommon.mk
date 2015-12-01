@@ -84,9 +84,6 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Includes
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8916-common/include
 
-# Ion
-TARGET_USES_NEW_ION_API :=true
-
 # Kernel
 BOARD_DTBTOOL_ARG := -2
 BOARD_KERNEL_BASE := 0x80000000
