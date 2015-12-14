@@ -72,10 +72,6 @@ MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 # Dlmalloc
 MALLOC_IMPL := dlmalloc
 
-# GPS
-TARGET_GPS_HAL_PATH := device/samsung/msm8916-common/gps
-BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
-
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 

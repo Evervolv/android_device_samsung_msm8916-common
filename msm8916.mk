@@ -79,14 +79,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fsck.f2fs
 
-# GPS
-PRODUCT_PACKAGES += \
-    gps.msm8916
-
 PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/gps/sap.conf:system/etc/sap.conf \
-    device/samsung/msm8916-common/gps/flp.conf:system/etc/flp.conf \
-    device/samsung/msm8916-common/gps/izat.conf:system/etc/izat.conf
+    device/samsung/msm8916-common/configs/sap.conf:system/etc/sap.conf \
+    device/samsung/msm8916-common/configs/flp.conf:system/etc/flp.conf \
+    device/samsung/msm8916-common/configs/izat.conf:system/etc/izat.conf
 
 # Input
 PRODUCT_PACKAGES += \
