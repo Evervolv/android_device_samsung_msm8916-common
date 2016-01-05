@@ -32,7 +32,10 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
+AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -86,7 +89,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8916-common/include
 # Kernel
 BOARD_DTBTOOL_ARG := -2
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
@@ -110,11 +113,6 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/samsung/msm8916-common/sepolicy
-
-# Vold
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
-BOARD_VOLD_MAX_PARTITIONS := 65
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true

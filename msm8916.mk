@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -75,7 +76,6 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
-    libtinyxml \
     memtrack.msm8916
 
 # Filesystem
@@ -98,6 +98,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/flp.conf:system/etc/flp.conf \
     device/samsung/msm8916-common/configs/izat.conf:system/etc/izat.conf
 
+# IDC
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/keylayout/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
+    device/samsung/msm8916-common/keylayout/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
+
 # Input
 PRODUCT_PACKAGES += \
     InputDisabler
@@ -118,10 +123,9 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/samsung/msm8916-common/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
-    device/samsung/msm8916-common/keylayout/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
-    device/samsung/msm8916-common/keylayout/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
+    device/samsung/msm8916-common/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/samsung/msm8916-common/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     device/samsung/msm8916-common/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
     device/samsung/msm8916-common/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
@@ -144,7 +148,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -152,12 +155,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw \
-    libdashplayer \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+    libOmxVidcCommon \
+    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
@@ -184,9 +183,15 @@ PRODUCT_PACKAGES += \
     tinyplay \
     tinycap \
     tinymix \
-    tinypcminfo
+    tinypcminfo \
+    libtinyxml
 
-# USB 
+# USB
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true \
+    persist.sys.usb.config=mtp \
+    ro.sys.usb.default.config=mtp
+
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
