@@ -101,8 +101,8 @@ public class SamsungMSM8916RIL extends RIL implements CommandsInterface {
 
     private AudioManager mAudioManager;
 
-    public SamsungMSM8916RIL(Context context, int networkModes, int cdmaSubscription) {
-        this(context, networkModes, cdmaSubscription, null);
+    public SamsungMSM8916RIL(Context context, int preferredNetworkType, int cdmaSubscription) {
+        this(context, preferredNetworkType, cdmaSubscription, null);
     }
 
     public SamsungMSM8916RIL(Context context, int preferredNetworkType,
