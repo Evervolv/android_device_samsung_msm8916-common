@@ -147,6 +147,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8916RIL \
     ro.ril.telephony.mqanelements=6
 
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libxml2
+
 # TinyAlsa
 PRODUCT_PACKAGES += \
     libtinyalsa \
@@ -179,10 +183,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/samsung/msm8916-common/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     device/samsung/msm8916-common/configs/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
-
-# XML
-PRODUCT_PACKAGES += \
-    libxml2
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
