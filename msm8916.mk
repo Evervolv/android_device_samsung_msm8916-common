@@ -397,8 +397,7 @@ PRODUCT_PACKAGES += \
     libsecnativefeature \
     libshim_secril \
     libxml2 \
-    macloader \
-    rmnetcli
+    macloader
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
