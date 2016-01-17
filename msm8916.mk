@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libextmedia_jni \
+    libqcmediaplayer \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
