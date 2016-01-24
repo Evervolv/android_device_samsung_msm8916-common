@@ -92,6 +92,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     InputDisabler
 
+# IO Scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=bfq
+
 # IRSC
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/sec_config:system/etc/sec_config
