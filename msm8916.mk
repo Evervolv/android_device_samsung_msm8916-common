@@ -64,13 +64,6 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     camera.msm8916
 
-# CRDA
-PRODUCT_PACKAGES += \
-    crda \
-    linville.key.pub.pem \
-    regdbdump \
-    regulatory.bin
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8916 \
@@ -80,7 +73,6 @@ PRODUCT_PACKAGES += \
 
 # Filesystem
 PRODUCT_PACKAGES += \
-    e2fsck \
     fsck.f2fs
 
 # FM
@@ -194,9 +186,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true \
     persist.sys.usb.config=mtp \
     ro.sys.usb.default.config=mtp
-
-PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory
 
 # WCNSS service daemon
 PRODUCT_PACKAGES += \
