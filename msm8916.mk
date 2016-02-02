@@ -64,6 +64,11 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     camera.msm8916
 
+# Art
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.dex2oat_thread_count=4 \
+    dalvik.vm.dex2oat-flags=--no-watch-dog
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8916 \
