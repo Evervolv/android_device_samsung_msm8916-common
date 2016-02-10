@@ -168,6 +168,16 @@ PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/prima/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/samsung/msm8916-common/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.qcom.bt.sh \
+    fstab.qcom \
+    init.qcom.rc \
+    init.qcom.power.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    ueventd.qcom.rc
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8916RIL \
@@ -184,6 +194,10 @@ PRODUCT_PACKAGES += \
     tinymix \
     tinypcminfo \
     libtinyxml
+
+# TWRP
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
