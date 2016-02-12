@@ -95,11 +95,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/flp.conf:system/etc/flp.conf \
     device/samsung/msm8916-common/configs/izat.conf:system/etc/izat.conf
 
-# IDC
-PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/keylayout/Synaptics_RMI4_TouchPad_Sensor.idc:system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
-    device/samsung/msm8916-common/keylayout/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
-
 # Input
 PRODUCT_PACKAGES += \
     InputDisabler
@@ -117,14 +112,6 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
-
-# Keylayouts
-PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
-    device/samsung/msm8916-common/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/samsung/msm8916-common/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
-    device/samsung/msm8916-common/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
-    device/samsung/msm8916-common/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
 
 # Lights
 PRODUCT_PACKAGES += \
