@@ -21,10 +21,8 @@ allow bluetooth_loader efs_file:dir search;
 allow bluetooth_loader bluetooth_efs_file:dir search;
 allow bluetooth_loader bluetooth_efs_file:file { open read };
 
-# Talk to init over the property socket
-unix_socket_connect(bluetooth_loader, property, init)
 # Set persist.service.bdroid.* and bluetooth.* property values
-allow { bluetooth bluetooth_loader } bluetooth_prop:property_service set;
+set_prop(bluetooth_loader, bluetooth_prop)
 
 # Allow getprop/setprop for init.qcom.bt.sh
 allow bluetooth_loader system_file:file execute_no_trans;
