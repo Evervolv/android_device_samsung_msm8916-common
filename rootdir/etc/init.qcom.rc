@@ -36,6 +36,7 @@ on early-init
     mkdir /efs 0771 system radio
     mkdir /firmware 0771 system system
     mkdir /firmware-modem 0771 system system
+    mkdir /persist 0771 system system
 
     chown system system /sys/kernel/debug/kgsl/proc
     chmod 644 /proc/cmdline
@@ -45,21 +46,15 @@ on early-init
 on init
     export LD_SHIM_LIBS /system/lib/libril.so|libril_shim.so:/system/lib/libcrypto.so|libboringssl-compat.so
 
-    # Set permissions for persist partition
-    mkdir /persist 0771 system system
-
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
 on fs
     mount_all fstab.qcom
+    swapon_all fstab.qcom
 
-    chown system radio /efs
-    chmod 0771 /efs
-    rm -rf /efs/dmverity
     restorecon_recursive /efs
-
     restorecon_recursive /persist
 
     # Audio NXP
