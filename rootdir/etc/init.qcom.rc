@@ -51,6 +51,7 @@ on init
     symlink /sdcard /storage/sdcard0
 
 on fs
+    wait /dev/block/bootdevice
     mount_all fstab.qcom
     swapon_all fstab.qcom
 

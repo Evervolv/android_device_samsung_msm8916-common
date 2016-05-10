@@ -30,15 +30,6 @@ TARGET_CPU_CORTEX_A53 := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
-# Art
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
@@ -65,18 +56,11 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Display
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 
 # Dlmalloc
 MALLOC_IMPL := dlmalloc
@@ -100,21 +84,29 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8916-common/include
 # Kernel
 BOARD_DTBTOOL_ARG := -2
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
+
+# Keymaster
+TARGET_HW_KEYMASTER_V03 := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Misc
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
-PROTOBUF_SUPPORTED := true
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+
+# Preload
+TARGET_LDPRELOAD := libNimsWrap.so
+
+# Protobuf
+PROTOBUF_SUPPORTED := false
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/msm8916-common/rootdir/etc/fstab.qcom
@@ -151,10 +143,6 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_NO_USB_STORAGE := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_INCLUDE_CRYPTO := true
-
-# Vold
-BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
-BOARD_VOLD_MAX_PARTITIONS := 65
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
