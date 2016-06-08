@@ -294,6 +294,7 @@ PRODUCT_PACKAGES += \
 # WPA supplicant
 PRODUCT_PACKAGES += \
     hostapd \
+    wificond \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
