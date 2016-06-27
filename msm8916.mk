@@ -42,11 +42,6 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
-# Audio
-PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/audio/audio_effects.conf:system/etc/audio_effects.conf \
-    device/samsung/msm8916-common/audio/audio_policy.conf:system/etc/audio_policy.conf
-
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
@@ -89,7 +84,6 @@ PRODUCT_PACKAGES += \
     gps.msm8916
 
 PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/configs/gps.conf:system/etc/gps.conf \
     device/samsung/msm8916-common/configs/sap.conf:system/etc/sap.conf \
     device/samsung/msm8916-common/configs/flp.conf:system/etc/flp.conf \
     device/samsung/msm8916-common/configs/izat.conf:system/etc/izat.conf
@@ -115,9 +109,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
-    device/samsung/msm8916-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/msm8916-common/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/samsung/msm8916-common/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/samsung/msm8916-common/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
 # Misc.
 PRODUCT_PACKAGES += \
