@@ -170,12 +170,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=true \
-    persist.sys.usb.config=mtp \
-    ro.sys.usb.default.config=mtp
-
 # WCNSS service daemon
 PRODUCT_PACKAGES += \
     libcurl \

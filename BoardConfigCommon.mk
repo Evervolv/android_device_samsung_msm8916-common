@@ -68,9 +68,6 @@ MALLOC_IMPL := dlmalloc
 # FM
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
-# Fonts
-EXTENDED_FONT_FOOTPRINT := true
-
 # GPS
 TARGET_GPS_HAL_PATH := device/samsung/msm8916-common/gps
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
@@ -101,9 +98,6 @@ HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
-
-# Preload
-TARGET_LDPRELOAD := libNimsWrap.so
 
 # Protobuf
 PROTOBUF_SUPPORTED := false
