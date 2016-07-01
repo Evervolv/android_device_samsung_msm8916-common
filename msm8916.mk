@@ -111,11 +111,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     device/samsung/msm8916-common/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
 
-# Misc.
-PRODUCT_PACKAGES += \
-    libstlport \
-    libboringssl-compat
-
 # OMX
 PRODUCT_PACKAGES += \
     libextmedia_jni \
