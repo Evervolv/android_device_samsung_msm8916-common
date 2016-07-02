@@ -48,10 +48,10 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8916 \
     audio.r_submix.default \
     audio.usb.default \
-    libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    tinymix
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
-    memtrack.msm8916
+    memtrack.msm8916 \
+    libtinyxml
 
 # Filesystem
 PRODUCT_PACKAGES += \
@@ -143,14 +144,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8916RIL \
     ro.ril.telephony.mqanelements=6
-
-# TinyAlsa utils
-PRODUCT_PACKAGES += \
-    tinyplay \
-    tinycap \
-    tinymix \
-    tinypcminfo \
-    libtinyxml
 
 # TWRP
 PRODUCT_COPY_FILES += \
