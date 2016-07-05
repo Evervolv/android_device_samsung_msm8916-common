@@ -215,6 +215,21 @@ on boot
     chown system radio /sys/class/sensors/magnetic_sensor/name
     chown system radio /sys/class/sensors/magnetic_sensor/status
 
+    # Grip_sensor_wifi
+    chown system radio /sys/class/sensors/grip_sensor_wifi/calibration
+    chown system radio /sys/class/sensors/grip_sensor_wifi/menual_calibrate
+    chown system radio /sys/class/sensors/grip_sensor_wifi/mode
+    chown system radio /sys/class/sensors/grip_sensor_wifi/name
+    chown system radio /sys/class/sensors/grip_sensor_wifi/normal_threshold
+    chown system radio /sys/class/sensors/grip_sensor_wifi/onoff
+    chown system radio /sys/class/sensors/grip_sensor_wifi/raw_data
+    chown system radio /sys/class/sensors/grip_sensor_wifi/readback
+    chown system radio /sys/class/sensors/grip_sensor_wifi/register_read
+    chown system radio /sys/class/sensors/grip_sensor_wifi/register_write
+    chown system radio /sys/class/sensors/grip_sensor_wifi/reset
+    chown system radio /sys/class/sensors/grip_sensor_wifi/threshold
+    chown system radio /sys/class/sensors/grip_sensor_wifi/vendor
+
     # Light_sensor
     chown system radio /sys/class/sensors/light_sensor/lux
     chown system radio /sys/class/sensors/light_sensor/raw_data
