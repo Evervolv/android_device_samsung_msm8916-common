@@ -25,3 +25,6 @@
 
 # EFS
 /dev/block/bootdevice/by-name/efs               u:object_r:modem_efs_partition_device:s0
+
+# Thermal Engine
+/system/vender/bin/thermal-engine                        u:object_r:thermal-engine_exec:s0
