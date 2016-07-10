@@ -139,6 +139,11 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SamsungMSM8916RIL \
+    ro.ril.telephony.mqanelements=6
+
 # TinyAlsa utils
 PRODUCT_PACKAGES += \
     tinyplay \

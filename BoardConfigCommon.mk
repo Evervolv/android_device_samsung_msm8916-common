@@ -110,6 +110,9 @@ BOARD_RECOVERY_SWIPE := true
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
+# RIL
+BOARD_RIL_CLASS := ../../../device/samsung/msm8916-common/ril/
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
