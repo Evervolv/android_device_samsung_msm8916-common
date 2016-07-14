@@ -42,12 +42,14 @@ PRODUCT_PACKAGES += \
     libantradio \
     antradio_app
 
+# Audio
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
     audio.primary.msm8916 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -144,6 +146,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8916RIL \
     ro.ril.telephony.mqanelements=6
+
+# TinyAlsa
+PRODUCT_PACKAGES += \
+    libtinyalsa \
+    tinyplay \
+    tinycap \
+    tinypcminfo
 
 # TWRP
 PRODUCT_COPY_FILES += \
