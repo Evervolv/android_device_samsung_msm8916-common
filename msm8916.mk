@@ -66,6 +66,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog
 
 # Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196608
+
 PRODUCT_PACKAGES += \
     copybit.msm8916 \
     gralloc.msm8916 \
@@ -146,6 +149,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8916RIL \
     ro.ril.telephony.mqanelements=6
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rild.nitz_plmn="" \
+    persist.rild.nitz_long_ons_0="" \
+    persist.rild.nitz_long_ons_1="" \
+    persist.rild.nitz_long_ons_2="" \
+    persist.rild.nitz_long_ons_3="" \
+    persist.rild.nitz_short_ons_0="" \
+    persist.rild.nitz_short_ons_1="" \
+    persist.rild.nitz_short_ons_2="" \
+    persist.rild.nitz_short_ons_3=""
 
 PRODUCT_PACKAGES += \
     librmnetctl \
