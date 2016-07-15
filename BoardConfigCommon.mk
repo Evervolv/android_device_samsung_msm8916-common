@@ -45,6 +45,9 @@ BLUETOOTH_HCI_USE_MCT := true
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8916
+
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
