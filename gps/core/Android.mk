@@ -32,6 +32,10 @@ LOCAL_SRC_FILES += \
     LocDualContext.cpp \
     loc_core_log.cpp
 
+# Add shims here
+LOCAL_SRC_FILES += \
+    shims/LocAdapterBase.cpp \
+
 LOCAL_CFLAGS += \
      -fno-short-enums \
      -D_ANDROID_
