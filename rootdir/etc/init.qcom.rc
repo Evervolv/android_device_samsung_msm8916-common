@@ -43,6 +43,9 @@ on early-init
 
     symlink /data/tombstones /tombstones
 
+    # Turn off backlight on blank
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
+
 on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -383,9 +386,6 @@ on boot
     chown radio net_bt_stack /efs/bluetooth/bt_addr
     chmod 0755 /efs/bluetooth/bt_addr
     restorecon_recursive /efs/bluetooth
-
-    # Start qcamerasvr
-    start qcamerasvr
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -741,6 +741,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
+    writepid /dev/cpuset/system-background/tasks
  
 service charger /charger
     class charger
@@ -789,6 +790,7 @@ service perfd /system/vendor/bin/perfd
    user root
    group root
    disabled
+   writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class core
@@ -810,6 +812,7 @@ service wcnss-service /system/bin/wcnss_service
     class main
     user system
     group system wifi radio
+    oneshot
 
 # Dual-sim support
 on property:persist.radio.multisim.config=dsds
