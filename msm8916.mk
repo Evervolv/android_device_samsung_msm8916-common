@@ -79,11 +79,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fsck.f2fs
 
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
