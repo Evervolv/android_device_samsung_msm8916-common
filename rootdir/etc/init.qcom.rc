@@ -558,6 +558,7 @@ on post-fs-data
 
 service netmgrd /system/bin/netmgrd
     class main
+    group wakelock
 
 on property:ro.use_data_netmgrd=false
     stop netmgrd
@@ -576,7 +577,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-    group system
+    group system wakelock
 
 service rfs_access /system/bin/rfs_access
    class core
@@ -617,7 +618,7 @@ on property:bluetooth.hciattach=false
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps qcom_diag wakelock
 
 service qmiproxy /system/bin/qmiproxy
     class main
