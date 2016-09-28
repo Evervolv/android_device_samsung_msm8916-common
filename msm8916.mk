@@ -85,6 +85,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # IRSC
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/sec_config:system/etc/sec_config
