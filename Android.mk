@@ -33,7 +33,7 @@ $(CMN_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(CMN_SYMLINKS)
+MSM8916_SYMLINKS += $(CMN_SYMLINKS)
 
 # DMverity
 DMV_IMAGES := \
@@ -46,7 +46,7 @@ $(DMV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(DMV_SYMLINKS)
+MSM8916_SYMLINKS += $(DMV_SYMLINKS)
 
 # ISDB
 ISDB_IMAGES := \
@@ -59,7 +59,7 @@ $(ISDB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(ISDB_SYMLINKS)
+MSM8916_SYMLINKS += $(ISDB_SYMLINKS)
 
 # MCpay
 MCP_IMAGES := \
@@ -72,7 +72,7 @@ $(MCP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(MCP_SYMLINKS)
+MSM8916_SYMLINKS += $(MCP_SYMLINKS)
 
 # MLdap
 MLD_IMAGES := \
@@ -85,7 +85,7 @@ $(MLD_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(MLD_SYMLINKS)
+MSM8916_SYMLINKS += $(MLD_SYMLINKS)
 
 # Modem
 MODEM_IMAGES := \
@@ -102,7 +102,7 @@ $(MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware-modem/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(MODEM_SYMLINKS)
+MSM8916_SYMLINKS += $(MODEM_SYMLINKS)
 
 # Prov
 PROV_IMAGES := \
@@ -115,7 +115,7 @@ $(PROV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(PROV_SYMLINKS)
+MSM8916_SYMLINKS += $(PROV_SYMLINKS)
 
 # SECstor
 SECSTOR_IMAGES := \
@@ -128,7 +128,7 @@ $(SECSTOR_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(SECSTOR_SYMLINKS)
+MSM8916_SYMLINKS += $(SECSTOR_SYMLINKS)
 
 # Reactive
 REACT_IMAGES := \
@@ -141,7 +141,7 @@ $(REACT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(REACT_SYMLINKS)
+MSM8916_SYMLINKS += $(REACT_SYMLINKS)
 
 # SKM
 SKM_IMAGES := \
@@ -154,7 +154,7 @@ $(SKM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(SKM_SYMLINKS)
+MSM8916_SYMLINKS += $(SKM_SYMLINKS)
 
 # SSHDcap
 SSHDCPAP_IMAGES := \
@@ -167,7 +167,7 @@ $(SSHDCPAP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(SSHDCPAP_SYMLINKS)
+MSM8916_SYMLINKS += $(SSHDCPAP_SYMLINKS)
 
 # Tbase
 TBASE_IMAGES := \
@@ -180,7 +180,7 @@ $(TBASE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(TBASE_SYMLINKS)
+MSM8916_SYMLINKS += $(TBASE_SYMLINKS)
 
 # TZ
 TZ_IMAGES := \
@@ -194,7 +194,7 @@ $(TZ_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(TZ_SYMLINKS)
+MSM8916_SYMLINKS += $(TZ_SYMLINKS)
 
 # Tima
 TIMA_IMAGES := \
@@ -210,7 +210,7 @@ $(TIMA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(TIMA_SYMLINKS)
+MSM8916_SYMLINKS += $(TIMA_SYMLINKS)
 
 # Wcnss
 WCNSS_IMAGES := \
@@ -224,7 +224,7 @@ $(WCNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_SYMLINKS)
+MSM8916_SYMLINKS += $(WCNSS_SYMLINKS)
 
 # Widevine
 WV_IMAGES := \
@@ -237,7 +237,7 @@ $(WV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(WV_SYMLINKS)
+MSM8916_SYMLINKS += $(WV_SYMLINKS)
 
 # Create links for audcal data files
 $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9306; \
@@ -252,6 +252,11 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
     $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
     $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+
+.PHONY: msm8916-symlinks
+msm8916-symlinks: $(MSM8916_SYMLINKS)
+
+ALL_DEFAULT_INSTALLED_MODULES += $(MSM8916_SYMLINKS)
 
 endif
 endif
