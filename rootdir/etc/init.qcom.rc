@@ -688,9 +688,9 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
  
-service charger /charger
+service charger /sbin/healthd -c
     class charger
-    group log
+    critical
     seclabel u:r:healthd:s0
 
 service ssr_setup /system/bin/ssr_setup
