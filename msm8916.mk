@@ -71,6 +71,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.dex2oat_thread_count=4 \
     dalvik.vm.dex2oat-flags=--no-watch-dog
 
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bluetooth.dun=true \
+    ro.bluetooth.hfp.ver=1.7 \
+    ro.bluetooth.sap=true \
+    ro.qualcomm.bluetooth.ftp=true \
+    ro.qualcomm.bluetooth.hfp=true \
+    ro.qualcomm.bluetooth.hsp=true \
+    ro.qualcomm.bluetooth.map=true \
+    ro.qualcomm.bluetooth.nap=true \
+    ro.qualcomm.bluetooth.opp=true \
+    ro.qualcomm.bluetooth.pbap=true
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
