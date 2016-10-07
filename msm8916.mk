@@ -47,8 +47,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
-# XML Audio configuration files
+# Audio configuration file
 PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    device/samsung/msm8916-common/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
@@ -81,6 +83,7 @@ PRODUCT_PACKAGES += \
     fsck.f2fs
 
 PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/configs/gps.conf:system/etc/gps.conf \
     device/samsung/msm8916-common/configs/sap.conf:system/etc/sap.conf \
     device/samsung/msm8916-common/configs/flp.conf:system/etc/flp.conf \
     device/samsung/msm8916-common/configs/izat.conf:system/etc/izat.conf
@@ -111,6 +114,8 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/samsung/msm8916-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
