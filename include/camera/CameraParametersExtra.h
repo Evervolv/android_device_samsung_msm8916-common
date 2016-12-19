@@ -103,7 +103,7 @@ const char CameraParameters::EFFECT_NEON[] = "neon"; \
 const char CameraParameters::SCENE_MODE_FLOWERS[] = "flowers"; \
 const char CameraParameters::SCENE_MODE_AR[] = "AR"; \
 const char CameraParameters::PIXEL_FORMAT_YUV420SP_ADRENO[] = "yuv420sp-adreno"; \
-const char CameraParameters::PIXEL_FORMAT_YUV420SP_NV21E[] = "yuv420sp-nv21e"; \
+const char CameraParameters::PIXEL_FORMAT_YUV420SP_NV21[] = "nv21"; \
 const char CameraParameters::PIXEL_FORMAT_RAW[] = "raw"; \
 const char CameraParameters::PIXEL_FORMAT_YV12[] = "yuv420p"; \
 const char CameraParameters::PIXEL_FORMAT_NV12[] = "nv12"; \
@@ -213,7 +213,7 @@ void CameraParameters::setPreviewFpsRange(int minFPS __unused, int maxFPS __unus
     static const char SCENE_MODE_FLOWERS[]; \
     static const char SCENE_MODE_AR[]; \
     static const char PIXEL_FORMAT_YUV420SP_ADRENO[]; \
-    static const char PIXEL_FORMAT_YUV420SP_NV21E[]; \
+    static const char PIXEL_FORMAT_YUV420SP_NV21[]; \
     static const char PIXEL_FORMAT_RAW[]; \
     static const char PIXEL_FORMAT_YV12[]; \
     static const char PIXEL_FORMAT_NV12[]; \
