@@ -26,5 +26,10 @@
     "target_path": "hardware/qcom/media-caf/msm8916",
     "dep_type": "hardware",
     "branch": "ng-7.1-8916"
+  },
+  {
+    "repository": "android_vendor_qcom_binaries",
+    "target_path": "vendor/qcom/binaries",
+    "dep_type": "vendor"
   }
 ]
