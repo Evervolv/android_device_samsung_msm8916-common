@@ -47,12 +47,40 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
+
 # Audio configuration file
 PRODUCT_COPY_FILES += \
-    device/samsung/msm8916-common/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    device/samsung/msm8916-common/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf
+    device/samsung/msm8916-common/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
+AUDIO_CFG_PATH := hardware/qcom/audio-caf/msm8916/configs
+
+# Audio configuration file
+PRODUCT_COPY_FILES += \
+    $(AUDIO_CFG_PATH)/msm8916_32/audio_policy.conf:system/etc/audio_policy.conf \
+    $(AUDIO_CFG_PATH)/msm8916_32/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_sbc.xml:system/etc/mixer_paths_sbc.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_qrd_skui.xml:system/etc/mixer_paths_qrd_skui.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_qrd_skuhf.xml:system/etc/mixer_paths_qrd_skuhf.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_wcd9306.xml:system/etc/mixer_paths_wcd9306.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_skul.xml:system/etc/mixer_paths_skul.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/sound_trigger_mixer_paths_wcd9306.xml:system/etc/sound_trigger_mixer_paths_wcd9306.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths_wcd9330.xml:system/etc/mixer_paths_wcd9330.xml
+
+ifeq ($(USE_QCOM_MIXER_PATHS), 1)
+PRODUCT_COPY_FILES += \
+    $(AUDIO_CFG_PATH)/msm8916_32/mixer_paths.xml:system/etc/mixer_paths.xml
+endif
+
+#XML Audio configuration files
 ifeq ($(USE_XML_AUDIO_POLICY_CONF), 1)
+PRODUCT_COPY_FILES += \
+    $(AUDIO_CFG_PATH)/msm8916_32/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
+
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
