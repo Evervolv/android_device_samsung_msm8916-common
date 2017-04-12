@@ -153,6 +153,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/sec_config:system/etc/sec_config
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
+    device/samsung/msm8916-common/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl \
+    device/samsung/msm8916-common/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
