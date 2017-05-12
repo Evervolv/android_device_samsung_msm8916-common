@@ -90,6 +90,9 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 # Keymaster
 TARGET_HW_KEYMASTER_V03 := true
 
+# Libc
+TARGET_NEEDS_GCC_LIBC := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
