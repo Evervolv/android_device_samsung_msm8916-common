@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Include proprietary blobs
+$(call inherit-product-if-exists, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/msm8916-common/overlay
 
