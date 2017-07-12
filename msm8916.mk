@@ -99,6 +99,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fsck.f2fs
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8916
+
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/gps.conf:system/etc/gps.conf \
     device/samsung/msm8916-common/configs/sap.conf:system/etc/sap.conf \
