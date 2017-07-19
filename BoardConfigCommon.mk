@@ -106,6 +106,8 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8916-common/include
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_DTBTOOL_ARG := -2
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci
