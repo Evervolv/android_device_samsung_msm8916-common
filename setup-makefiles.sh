@@ -47,8 +47,11 @@ fi
 
 HELPER="$CM_ROOT"/vendor/cm/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
-    exit 1
+    HELPER="$CM_ROOT"/vendor/ev/build/tools/extract_utils.sh
+    if [ ! -f "$HELPER" ]; then
+        echo "Unable to find helper script at $HELPER"
+        exit 1
+    fi
 fi
 . "$HELPER"
 
