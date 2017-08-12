@@ -19,7 +19,7 @@
 set -e
 
 BOARD_COMMON=msm8916-common
-DEVICES_ALL="gprimelte gprimeltespr gprimeltexx gtelwifiue gtesqltespr j7ltechn j7ltespr"
+PLATFORM_ALL="msm8916 msm8939"
 VENDOR=samsung
 
 INITIAL_COPYRIGHT_YEAR=2017
@@ -88,7 +88,7 @@ if  [ "$SETUP_BOARD_COMMON_DIR" -eq 1 ]; then
    setup_vendor "$BOARD_COMMON" "$VENDOR" "$CM_ROOT" true
 
    # Copyright headers and guards
-   write_headers "$DEVICES_ALL"
+   write_headers "$PLATFORM_ALL" TARGET_PLATFORM
 
    write_makefiles "$MY_DIR"/proprietary-files.txt
 
