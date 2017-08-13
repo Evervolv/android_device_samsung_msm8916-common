@@ -10,6 +10,12 @@
     "dep_type": "kernel"
   },
   {
+    "repository": "android_hardware_qcom_bt",
+    "target_path": "hardware/qcom/bt-caf",
+    "dep_type": "hardware",
+    "branch": "ng-7.1-caf"
+  },
+  {
     "repository": "android_hardware_qcom_audio-caf",
     "target_path": "hardware/qcom/audio-caf/msm8916",
     "dep_type": "hardware",
