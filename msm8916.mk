@@ -120,11 +120,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
 
 PRODUCT_PACKAGES += \
-    copybit.msm8916 \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
-    memtrack.msm8916 \
-    libtinyxml
+    libgenlock \
+    libtinyxml \
+    memtrack.msm8916
 
 # Filesystem
 PRODUCT_PACKAGES += \
@@ -212,6 +217,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
