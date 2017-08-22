@@ -174,6 +174,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# HIDL
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8916-common/manifest.xml:system/vendor/manifest.xml
+
 # IRSC
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/configs/sec_config:system/etc/sec_config
