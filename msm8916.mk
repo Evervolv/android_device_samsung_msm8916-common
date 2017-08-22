@@ -171,6 +171,10 @@ PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/keylayout/sec_touchscreen.kl:system/usr/keylayout/sec_touchscreen.kl \
     device/samsung/msm8916-common/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916
