@@ -271,6 +271,10 @@ PRODUCT_PACKAGES += \
     tinycap \
     tinypcminfo
 
+# Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
+
 # TWRP
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
