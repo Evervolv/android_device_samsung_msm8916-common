@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8916
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+
 # Filesystem
 PRODUCT_PACKAGES += \
     fsck.f2fs
