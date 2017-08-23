@@ -258,6 +258,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/msm8916-common/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 # WCNSS service daemon
 PRODUCT_PACKAGES += \
     libcurl \
