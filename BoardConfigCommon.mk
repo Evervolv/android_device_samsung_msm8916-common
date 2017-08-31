@@ -138,8 +138,8 @@ BOARD_RIL_CLASS := ../../../device/samsung/msm8916-common/ril/
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/msm8916-common/sepolicy
+# BOARD_SEPOLICY_DIRS += \
+#     device/samsung/msm8916-common/sepolicy
 
 # TWRP
 TW_THEME := portrait_mdpi
