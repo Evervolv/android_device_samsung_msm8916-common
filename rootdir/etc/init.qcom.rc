@@ -226,7 +226,6 @@ on boot
 
 	chown system system /sys/class/lcd/panel/panel/auto_brightness
 	chown system system /sys/class/lcd/panel/window_type
-	chown radio system /sys/class/lcd/panel/power_reduce
 	chown radio system /sys/class/lcd/panel/siop_enable
 	chown radio system /sys/class/lcd/panel/temperature
 	chown radio system /sys/class/lcd/panel/tuning
@@ -469,6 +468,9 @@ on post-fs-data
     #Create directory for FOTA
     mkdir /data/fota 0771
     chown system system /data/fota
+
+    chown radio system /sys/class/lcd/panel/power_reduce
+    chmod 0664 /sys/class/lcd/panel/power_reduce
 
     setprop vold.post_fs_data_done 1
 

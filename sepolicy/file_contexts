@@ -30,6 +30,12 @@
 # Gatekeeper
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software       u:object_r:hal_gatekeeper_default_exec:s0
 
+# Graphics
+/sys/devices/virtual/lcd/panel(/.*)?                 u:object_r:sysfs_graphics:s0
+
+# LiveDisplay
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-msm8916     u:object_r:hal_evervolv_livedisplay_sysfs_exec:s0
+
 # Macloader
 /system/bin/macloader                                u:object_r:macloader_exec:s0
 
