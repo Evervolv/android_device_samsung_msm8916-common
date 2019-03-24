@@ -620,10 +620,10 @@ on property:vold.decrypt=trigger_restart_framework
     start wcnss-service
 
 # FM enable/disable triggers
-on property:vendor.hw.fm.init=1
+on property:hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
-on property:vendor.hw.fm.init=0
+on property:hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
 
 service irsc_util /system/vendor/bin/irsc_util "/vendor/etc/sec_config"
@@ -706,7 +706,7 @@ service wlandutservice /system/vendor/bin/wlandutservice
     disabled
     oneshot
 
-service fm_dl /system/vendor/bin/init.qcom.fm.sh
+service vendor.fm /system/vendor/bin/init.qcom.fm.sh
     class late_start
     user system
     group system
