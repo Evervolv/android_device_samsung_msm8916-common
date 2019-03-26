@@ -48,17 +48,21 @@ vendor/lib/libmmcamera_faceproc.so|8e6a95d0dd0d282f96cc905c11c1a738
 
 # DRM
 bin/qcom-system-daemon
+lib/libdrmdecrypt.so
 lib/libhdcp2.so
 vendor/lib/libmmQSM.so
 vendor/lib/libmmrtpdecoder.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 vendor/lib/liboemcrypto.so
+vendor/lib/drm/libdrmprplugin.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libprdrmdecrypt.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib/libtzplayready.so
+vendor/lib/mediadrm/libprmediadrmdecrypt.so
+vendor/lib/mediadrm/libprmediadrmplugin.so
 
 # FM
 bin/fmconfig
@@ -227,5 +231,9 @@ bin/time_daemon
 vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
 
-# Widevine - from angler - OPR6.170623.017 factory image
-vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
+# Widevine - bullhead
+vendor/lib/drm/libdrmwvmplugin.so|6cfb61cd247076409a3a4e3f6ddecf24
+vendor/lib/libwvdrm_L1.so|a19e8a30943ed66d51f58504673e72c4
+vendor/lib/libwvm.so|dcd816349037aa40f0e5ff9d141c70cc
+vendor/lib/libWVStreamControlAPI_L1.so|74e4a4ba035ed5da9b81cc2cc3929151
+vendor/lib/mediadrm/libwvdrmengine.so|76d0add4f3f259030ef4ffb14dc92a2e
