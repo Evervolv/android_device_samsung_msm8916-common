@@ -238,7 +238,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service \
-    lights.MSM8916
+    lights.msm8916
 
 # Media configurations
 ifeq ($(filter j7ltespr j7ltechn,$(TARGET_DEVICE)),)
