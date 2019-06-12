@@ -660,7 +660,7 @@ service netmgrd /system/vendor/bin/netmgrd
     writepid /dev/cpuset/system-background/tasks
 
 service sensors /system/vendor/bin/sensors.qcom
-    class late_start
+    class early_hal
     user root
     group root
     disabled
