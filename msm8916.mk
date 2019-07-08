@@ -217,6 +217,10 @@ PRODUCT_PACKAGES += \
     fsck.f2fs \
     mkfs.f2fs
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service.software
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \

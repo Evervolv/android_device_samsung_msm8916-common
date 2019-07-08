@@ -27,6 +27,9 @@
 # Firmware
 /firmware-modem(/.*)?                                u:object_r:firmware_file:s0
 
+# Gatekeeper
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software       u:object_r:hal_gatekeeper_default_exec:s0
+
 # Macloader
 /system/bin/macloader                                u:object_r:macloader_exec:s0
 
