@@ -256,6 +256,8 @@ BOARD_SEPOLICY_DIRS += \
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/lib/libui.so|libui_shim.so \
+    /system/lib64/libui.so|libui_shim.so \
     /vendor/lib/libmmjpeg_interface.so|libboringssl-compat.so \
     /vendor/lib/libsec-ril.so|libshim_secril.so \
     /vendor/lib/libsec-ril-dsds.so|libshim_secril.so \
