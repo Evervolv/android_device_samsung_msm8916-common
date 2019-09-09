@@ -57,7 +57,7 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
     setprop qcom.audio.init complete
-    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+    exec  -- /vendor/bin/init.qcom.early_boot.sh
 
     setprop persist.service.bdroid.bdaddr "/efs/bluetooth/bt_addr"
 
