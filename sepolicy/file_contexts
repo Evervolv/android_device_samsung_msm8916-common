@@ -24,6 +24,9 @@
 /efs/imei(/.*)?                                      u:object_r:imei_efs_file:s0
 /efs/wifi(/.*)?                                      u:object_r:wifi_efs_file:s0
 
+# Firmware
+/firmware-modem(/.*)?                                u:object_r:firmware_file:s0
+
 # Macloader
 /system/bin/macloader                                u:object_r:macloader_exec:s0
 
