@@ -190,6 +190,10 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
