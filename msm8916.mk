@@ -196,12 +196,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fastbootd.available=true
+
 # FM
 PRODUCT_PACKAGES += \
     qcom.fmradio \
     FMRadio
 
-# FM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false
 
