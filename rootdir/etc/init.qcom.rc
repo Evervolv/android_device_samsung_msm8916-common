@@ -467,9 +467,6 @@ on post-fs-data
     mkdir /data/fota 0771
     chown system system /data/fota
 
-    # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
-
     setprop vold.post_fs_data_done 1
 
     #Create folder for mm-qcamera-daemon
@@ -546,12 +543,6 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-send-client stream 0666 system system
    socket thermal-recv-client stream 0660 system system
    socket thermal-recv-passive-client stream 0666 system system
-   group root
-   writepid /dev/cpuset/system-background/tasks
-
-service time_daemon /system/vendor/bin/time_daemon
-   class late_start
-   user root
    group root
    writepid /dev/cpuset/system-background/tasks
 
