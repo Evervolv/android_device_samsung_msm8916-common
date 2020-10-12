@@ -14,9 +14,6 @@ vendor/lib/libaudcal.so
 -vendor/lib/libaudioalsa.so
 vendor/lib/liblistensoundmodel2.so
 -vendor/lib/libqct_resampler.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
 
 # AptX - (Moto griffin - NCLS25.86-11-4-6-5)
 vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
