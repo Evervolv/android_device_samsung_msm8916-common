@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
     AdvancedDisplay \
     SamsungDoze
 
+# Do not spin up a separate process for the network stack, use an in-process APK.
+PRODUCT_PACKAGES += InProcessNetworkStack
+PRODUCT_PACKAGES += com.android.tethering.inprocess
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
