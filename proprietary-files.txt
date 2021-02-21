@@ -20,10 +20,10 @@ vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
 
 # Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|1bb293fcee8c93e6e5850592491336306e0b7fed
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|a876de15012f868c734c5cd0063bf745098a362f
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|dfe077d09d2c89e80429d68c70e6bb80286afb1e
-vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so|c31edee39b8c25fe0fba7efd36267ffded5785c6
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|0f047b3d20ce364c321fe7b277029b4d96932b68
+vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so|db977785edecf820575aac3b3858d835a45dc1c4
 -vendor/lib/libbtnv.so|9b6845a4206e1423b9d476fd6e290930ec6d0d4a
 
 # Camera
@@ -66,9 +66,9 @@ vendor/lib/mediadrm/libprmediadrmplugin.so
 # FM
 bin/fmconfig:vendor/bin/fmconfig
 bin/fm_qsoc_patches:vendor/bin/fm_qsoc_patches
--lib/vendor.qti.hardware.fm@1.0.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
+-lib/vendor.qti.hardware.fm@1.0.so|b8ac0e54ac4cc4cd8571088c626d036ee9fb1364
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|17ebf195d57ab9e4be4806764fb16e52ec9cac44
+vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so|2cbc9425a509523fb80e0ddd23aac81adf87bb89
 
 # GPS - From Crackling
 -lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so|03860b5a4e72edd96c9acce3886b6d23
