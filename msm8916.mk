@@ -240,10 +240,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.gps.agps_provider=1 \
     ro.pip.gated=0
 
-# Headers
-PRODUCT_VENDOR_KERNEL_HEADERS := \
-    hardware/qcom/msm8916/kernel-headers
-
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
