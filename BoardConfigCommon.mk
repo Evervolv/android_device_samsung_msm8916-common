@@ -225,8 +225,7 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libsec-ril-dsds.so|libshim_secril.so \
     /vendor/lib/hw/camera.vendor.msm8916.so|libcamera_shim.so \
     /vendor/lib/libizat_core.so|libshim_gps.so \
-    /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
-    /vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|libbase_shim.so
+    /vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true

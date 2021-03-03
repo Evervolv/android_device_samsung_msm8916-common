@@ -19,12 +19,10 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
 
-# Bluetooth - from aljeter - PPP29.55-35
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|45986b1685eb84a02832e43937dd504ca4520855
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so|18f843be10d756c0f5ad967cb2add77e5c2fd46b
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|2312d4c4c28068c88d596a76a7efc53511e838fb
--vendor/lib/libbtnv.so|f2143391527de9b57dcd27c974ea9de452609d04
+# Bluetooth
+bin/btnvtool:vendor/bin/btnvtool
+bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
+-vendor/lib/libbtnv.so|9b6845a4206e1423b9d476fd6e290930ec6d0d4a
 
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon

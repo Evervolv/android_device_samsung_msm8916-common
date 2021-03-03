@@ -100,7 +100,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbase_shim \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Bluetooth
@@ -406,6 +407,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
+    init.qcom.bt.sh \
     init.qcom.uicc.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
