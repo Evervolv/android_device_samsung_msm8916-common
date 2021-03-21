@@ -121,6 +121,9 @@ TARGET_NO_RPC := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/manifest.xml
+ifeq ($(filter gt58wifi gt510wifi gtelwifiue,$(TARGET_DEVICE)),)
+DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/manifest_telephony.xml
+endif
 
 # Kernel
 BOARD_KERNEL_CMDLINE += \
