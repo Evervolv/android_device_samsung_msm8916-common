@@ -19,12 +19,12 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|a876de15012f868c734c5cd0063bf745098a362f
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|0f047b3d20ce364c321fe7b277029b4d96932b68
-vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so|db977785edecf820575aac3b3858d835a45dc1c4
--vendor/lib/libbtnv.so|9b6845a4206e1423b9d476fd6e290930ec6d0d4a
+# Bluetooth - from aljeter - PPP29.55-35
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|45986b1685eb84a02832e43937dd504ca4520855
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so|18f843be10d756c0f5ad967cb2add77e5c2fd46b
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|2312d4c4c28068c88d596a76a7efc53511e838fb
+-vendor/lib/libbtnv.so|f2143391527de9b57dcd27c974ea9de452609d04
 
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
@@ -63,12 +63,12 @@ vendor/lib/libtzplayready.so
 vendor/lib/mediadrm/libprmediadrmdecrypt.so
 vendor/lib/mediadrm/libprmediadrmplugin.so
 
-# FM
-bin/fmconfig:vendor/bin/fmconfig
-bin/fm_qsoc_patches:vendor/bin/fm_qsoc_patches
--lib/vendor.qti.hardware.fm@1.0.so|b8ac0e54ac4cc4cd8571088c626d036ee9fb1364
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|17ebf195d57ab9e4be4806764fb16e52ec9cac44
-vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so|2cbc9425a509523fb80e0ddd23aac81adf87bb89
+# FM - from aljeter - PPP29.55-35
+-lib/vendor.qti.hardware.fm@1.0.so|28af07881f613f1ce7f45b7ca93d41395355eb17
+vendor/bin/fmconfig|49780b5da9ba7493a7c27f509dc851968f096c1c
+vendor/bin/fm_qsoc_patches|bbe66ac1ca7d44525a728870692c37785d878092
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|7050548ed6180facae36a7853f22dbc1007a222f
+vendor/lib/vendor.qti.hardware.fm@1.0.so|28af07881f613f1ce7f45b7ca93d41395355eb17
 
 # GPS - From Crackling
 -lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so|03860b5a4e72edd96c9acce3886b6d23
