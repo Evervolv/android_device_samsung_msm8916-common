@@ -204,14 +204,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fastbootd.available=true
 
-# FM
-PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    FMRadio
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false
-
 # FS
 PRODUCT_PACKAGES += \
     fs_config_files \
@@ -432,7 +424,6 @@ PRODUCT_PACKAGES += \
     init.carrier.rc \
     init.class_main.sh \
     init.link_ril_db.sh \
-    init.qcom.fm.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \

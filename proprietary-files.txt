@@ -65,8 +65,6 @@ vendor/lib/mediadrm/libprmediadrmplugin.so
 
 # FM - from aljeter - PPP29.55-35
 -lib/vendor.qti.hardware.fm@1.0.so|28af07881f613f1ce7f45b7ca93d41395355eb17
-vendor/bin/fmconfig|49780b5da9ba7493a7c27f509dc851968f096c1c
-vendor/bin/fm_qsoc_patches|bbe66ac1ca7d44525a728870692c37785d878092
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|7050548ed6180facae36a7853f22dbc1007a222f
 vendor/lib/vendor.qti.hardware.fm@1.0.so|28af07881f613f1ce7f45b7ca93d41395355eb17
 

@@ -686,13 +686,6 @@ service wlandutservice /system/vendor/bin/wlandutservice
     disabled
     oneshot
 
-service vendor.fm /system/vendor/bin/init.qcom.fm.sh
-    class late_start
-    user system
-    group system
-    disabled
-    oneshot
-
 service qcom-sh /system/vendor/bin/init.qcom.sh
     class late_start
     user root
